@@ -13,7 +13,7 @@ body{
 /* TITULO */
 .titulo{
     font-family: 'Press Start 2P';
-    font-size: 32px;
+    font-size: 52px;
     color: #FFCB05; 
     text-shadow: 2px 2px #2A75BB; 
     text-align: center;
@@ -33,6 +33,12 @@ body{
 }
 
 /* BARRA DE NAVEGACION */
+
+.main-header{
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
 
 .navbar {
     display: flex;                       
@@ -69,6 +75,13 @@ body{
 }
 
 .nav-list a:hover {
+    background-color: #e3350d; 
+    color: #fff;
+    text-shadow: 0 0 6px #ffcb05, 0 0 12px #ffcb05;
+    box-shadow: 0 0 12px #e3350d;
+}
+
+.nav-list .active{
     background-color: #e3350d; 
     color: #fff;
     text-shadow: 0 0 6px #ffcb05, 0 0 12px #ffcb05;
@@ -154,7 +167,7 @@ body{
 .pokemon-type:hover {
     transform: translateY(-5px);                  
     box-shadow: 0 8px 16px rgba(0,0,0,0.3);      
-    border-color: #ffcb05;                        
+    border-color: #ffcb05;                       
 }
 
 
