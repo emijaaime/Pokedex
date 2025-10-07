@@ -1,0 +1,263 @@
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background-image: url(../IMG/f6a18ac56651ce4f9ca7e0230706a0b6.jpg);
+    background-attachment: fixed;
+    scroll-behavior: smooth;
+    width: 1200px;
+    margin: 0 auto;
+}
+
+/* TITULO */
+.titulo{
+    font-family: 'Press Start 2P';
+    font-size: 32px;
+    color: #FFCB05; 
+    text-shadow: 2px 2px #2A75BB; 
+    text-align: center;
+}
+
+/* LOGO */
+.logo {
+    background-image: url("../IMG/pokemon-removebg-preview.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 150px;
+    height: 60px;
+    text-indent: -9999px; 
+    overflow: hidden;
+    margin-left: 10px;
+}
+
+/* BARRA DE NAVEGACION */
+
+.navbar {
+    display: flex;                       
+    justify-content: space-between;      
+    align-items: center;                 
+    background-color: #1a1d2e;  
+    padding: 16px 32px;
+    border-bottom: 4px solid #ffcb05; 
+    box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+    white-space: nowrap;
+}
+
+
+.nav-list {
+    display: flex;                
+    gap: 60px;                    
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-list li {
+    margin: 0;                    
+}
+
+.nav-list a {
+    text-decoration: none;
+    color: #ffcb05;  
+    font-family: 'Press Start 2P', cursive; 
+    font-size: 14px;
+    padding: 8px 14px;
+    border-radius: 8px;
+    transition: 0.5s;
+}
+
+.nav-list a:hover {
+    background-color: #e3350d; 
+    color: #fff;
+    text-shadow: 0 0 6px #ffcb05, 0 0 12px #ffcb05;
+    box-shadow: 0 0 12px #e3350d;
+}
+
+/* DESCRIPCION POKEDEX */
+
+.descripcion-pokedex {
+    background-color: #f0f8ff;
+    margin-top: 60px;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.descripcion-pokedex img {
+    width: 40%;
+    height: 350px;
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 150px;
+    border-radius: 5px;
+}
+
+.descripcion-pokedex .texto-descripcion {
+    display: inline-block;
+    width: 40%;
+    vertical-align: top;
+    text-align: center;
+    padding-left: 10px;
+    font-family: 'Roboto', sans-serif;
+    padding-left: 30px;
+    color: #222; 
+    line-height: 1.6;
+}
+.descripcion-pokedex h3{
+    text-align: center;
+    font-family: 'Press Start 2P';
+    color: red;
+    font-size: 22px;
+    padding-left: 10px;
+}
+
+/* TIPOS DE POKEMONES */
+
+.title-pokemon-type {
+    font-family: 'Press Start 2P', cursive;  
+    font-size: 24px;                         
+    text-transform: uppercase;               
+    color: #ff0000;                          
+    text-align: center;                     
+    margin-bottom: 80px;
+    margin-top: 80px;
+    letter-spacing: 2px;  
+    text-shadow: 2px 2px 0 #000, 4px 4px 0 #ffcb05;
+}
+
+#pokemones > div {
+    display: flex;
+    flex-wrap: wrap;              
+    justify-content: space-between;
+    align-items: stretch;  
+    text-align: center;       
+    gap: 30px;                    
+    padding: 0 20px;
+}
+
+.pokemon-type {
+    display: flex;     
+    flex-direction: column;       
+    justify-content: space-between;
+    width: 22%;                   
+    background-color: #f0f8ff; 
+    border-radius: 10px;       
+    padding: 10px;
+    height: 450px;
+    box-sizing: border-box;    
+    border: 2px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: 1s;
+}
+
+.pokemon-type:hover {
+    transform: translateY(-5px);                  
+    box-shadow: 0 8px 16px rgba(0,0,0,0.3);      
+    border-color: #ffcb05;                        
+}
+
+
+.pokemon-type h4 {
+    font-family: 'Press Start 2P', cursive;  
+    font-size: 16px;                          
+    color: #ff4500;                           
+    margin-bottom: 8px;
+    letter-spacing: 1px;                      
+    text-transform: uppercase;                
+}
+
+
+.pokemon-type p {
+    font-size: 14px;
+    margin-bottom: 10px;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+.pokemon-type img {
+    width: 99%;     
+    height: 230px;   
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+/* RAREZAS */
+
+.rarezas-container {
+    text-align: center;
+}
+
+.rarezas-container .rareza-card {
+    display: inline-block;
+    width: 22%;
+    margin: 3% 3%;
+    padding: 10px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    height: 350px;
+    vertical-align: top;
+    color: #fff;
+    text-align: center;
+    transition: transform 1s , box-shadow 1s ;
+}
+
+.rarezas-container .rareza-card img {
+    width: 90%;
+    height: 180px;
+    object-fit: contain;
+    border-radius: 10%;
+    margin-bottom: 10px;
+}
+
+.rarezas-container .rareza-card h4 {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+.rarezas-container p{
+    font-family: "Roboto";
+}
+.rarezas-container .comun { 
+    background-color: #a0a0a0; 
+    color: #000
+}         
+.rarezas-container .poco-comun { 
+    background-color: #4da6ff; 
+    color: #000
+}    
+.rarezas-container .raro { 
+    background-color: #9933ff; 
+    color: #000
+}           
+.rarezas-container .legendario { 
+    background-color: #ffcc00; 
+    color: #000; 
+} 
+.rarezas-container .shiny { 
+    background-color: #ff69b4; 
+    color: #000
+}          
+
+.rarezas-container .rareza-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+}
+
+.pokeball-boton{
+    position: fixed;
+    bottom: 20px;  
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    z-index: 1000;
+}
+.pokeball-boton img {
+    width: 100%;
+    height: auto;
+    transition: transform 1s;
+    cursor: pointer;
+}
+.pokeball-boton img:hover {
+    transform: rotate(360deg) scale(1.1);
+}

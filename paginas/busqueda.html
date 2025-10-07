@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Pokédex</title>
+    <link rel="stylesheet" href="../CSS/busqueda.css">
+    <link rel="stylesheet" href="../CSS/index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header id="main-header">
+        <nav class="navbar">
+            <h1 class="logo">Pokémon</h1>
+            <ul class="nav-list">
+                <li><a href="../index.html#inicio">Inicio</a></li>
+                <li><a href="../index.html#pokemones">Pokemones</a></li>
+                <li><a href="../index.html#rarezas">Rarezas</a></li>
+                <li><a href="busqueda.html">Pokedex</a></li>
+                <li><a href="../index.html#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="titulo">
+        <h2>POKEDEX</h2>
+    </div>
+    <input type="text" id="search" placeholder="Buscar Pokemon por nombre...">
+
+    <div class="boton-filtro">
+        <button onclick="filterType('Todos')">Todos</button>
+        <button onclick="filterType('Fuego')">Fuego</button>
+        <button onclick="filterType('Agua')">Agua</button>
+        <button onclick="filterType('Planta')">Planta</button>
+        <button onclick="filterType('Eléctrico')">Eléctrico</button>
+    </div>
+
+    <div id="pokedex">
+        <div class="pokemon-card" data-name="Pikachu" data-type="Eléctrico">
+            <h3>Pikachu</h3>
+            <p>Tipo: Eléctrico</p>
+        </div>
+        <div class="pokemon-card" data-name="Charmander" data-type="Fuego">
+            <h3>Charmander</h3>
+            <p>Tipo: Fuego</p>
+        </div>
+        <div class="pokemon-card" data-name="Squirtle" data-type="Agua">
+            <h3>Squirtle</h3>
+            <p>Tipo: Agua</p>
+        </div>
+        <div class="pokemon-card" data-name="Bulbasaur" data-type="Planta">
+            <h3>Bulbasaur</h3>
+            <p>Tipo: Planta</p>
+        </div>
+    </div>
+
+    <script>
+        const searchInput = document.getElementById('search');
+
+        searchInput.addEventListener('input', () => {
+            const query = searchInput.value.toLowerCase();
+            const cards = document.querySelectorAll('.pokemon-card');
+            cards.forEach((card) => {
+                const name = card.dataset.name.toLowerCase();
+                card.style.display = name.includes(query) ? 'inline-block' : 'none';
+            });
+        });
+        function filterType(type) {
+            const cards = document.querySelectorAll('.pokemon-card');
+            cards.forEach(card => {
+                if (type === 'Todos' || card.dataset.type === type) {
+                    card.style.display = 'inline-block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+    </script>
+    
+</body>
+</html>
